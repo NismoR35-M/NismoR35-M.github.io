@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Use the same head section from previous pages -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Knowledge Hub - MySave</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add favicon links from previous implementation -->
+    <style>
+        /* Add these styles to your existing CSS */
+        .knowledge-hero {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .knowledge-hero .subtitle {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 20px auto;
+            opacity: 0.9;
+        }
+
+        .article-grid {
+            padding: 60px 0;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .knowledge-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .knowledge-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px 12px 0 0;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            color: #0f172a;
+            margin-bottom: 15px;
+        }
+
+        .excerpt {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            color: #10b981;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .key-points, .stats, .comparison {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+
+        .stat-item {
+            margin: 10px 0;
+        }
+
+        .stat-value {
+            color: #10b981;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .stat-label {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .faq-section {
+            padding: 60px 0;
+            background: #f8fafc;
+        }
+
+        .faq-grid {
+            margin-top: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin: 10px 0;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+        }
+
+        .question {
+            color: #0f172a;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .answer {
+            display: none;
+            padding-top: 10px;
+            color: #64748b;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <!-- Same navigation as previous pages -->
+        <div class="container nav-content">
+            <div class="logo">
+                📱 MySave
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="knowledge.html">Knowledge</a>
+                <a href="privacy.html">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="knowledge-hero">
+        <div class="container">
+            <h1>Master Your Finances</h1>
+            <p class="subtitle">Essential financial literacy resources to complement your MySave experience</p>
+        </div>
+    </section>
+
+    <section class="article-grid">
+        <div class="container">
+            <div class="grid-container">
+                <!-- Article 1 - Budgeting Basics -->
+                <article class="knowledge-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Budget planning">
+                    </div>
+                    <div class="card-content">
+                        <h3>The 50/30/20 Budget Rule</h3>
+                        <p class="excerpt">Learn the fundamental budgeting technique used by financial experts worldwide. Allocate 50% to needs, 30% to wants, and 20% to savings/debt repayment.</p>
+                        <div class="key-points">
+                            <h4>Key Principles:</h4>
+                            <ul>
+                                <li>Needs: Housing, utilities, groceries</li>
+                                <li>Wants: Entertainment, dining out</li>
+                                <li>Savings: Emergency fund, investments</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="read-more">Read Guide →</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 - Emergency Funds -->
+                <article class="knowledge-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1604594849809-dfeddd911019?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Savings jar">
+                    </div>
+                    <div class="card-content">
+                        <h3>Building an Emergency Fund</h3>
+                        <p class="excerpt">Financial experts recommend saving 3-6 months of living expenses. Learn how to start small and build your safety net progressively.</p>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <div class="stat-value">64%</div>
+                                <div class="stat-label">Americans can't cover $1k emergency</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">$2.5k</div>
+                                <div class="stat-label">Recommended starter emergency fund</div>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">Read Guide →</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 - Debt Management -->
+                <article class="knowledge-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1581092160563-852b0c9d942b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Debt reduction">
+                    </div>
+                    <div class="card-content">
+                        <h3>Debt Snowball vs. Debt Avalanche</h3>
+                        <p class="excerpt">Compare two popular debt repayment strategies and discover which method works best for your financial situation.</p>
+                        <div class="comparison">
+                            <div class="method">
+                                <h4>Snowball Method</h4>
+                                <p>Pay smallest debts first for quick wins</p>
+                            </div>
+                            <div class="method">
+                                <h4>Avalanche Method</h4>
+                                <p>Target high-interest debts first for maximum savings</p>
+                            </div>
+                        </div>
+                        <a href="#" class="read-more">Read Guide →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Financial Literacy FAQ</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="question">What's a good credit score?<span class="toggle">+</span></div>
+                    <div class="answer">
+                        <p>Credit score ranges (FICO):</p>
+                        <ul>
+                            <li>300-579: Poor</li>
+                            <li>580-669: Fair</li>
+                            <li>670-739: Good</li>
+                            <li>740-799: Very Good</li>
+                            <li>800-850: Excellent</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Add more FAQ items -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Reuse footer from previous pages -->
+
+  
+
+    <!-- Add simple JavaScript for FAQ toggle -->
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.querySelector('.answer');
+                const toggle = item.querySelector('.toggle');
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                toggle.textContent = answer.style.display === 'block' ? '-' : '+';
+            });
+        });
+    </script>
+</body>
+</html>
